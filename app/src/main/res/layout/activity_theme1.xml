@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark">
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="66dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/digits"
+                android:layout_width="0dp"
+                android:layout_height="66dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_dial_textfield"
+                android:focusableInTouchMode="false"
+                android:freezesText="true"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:paddingLeft="45dp"
+                android:scrollHorizontally="true"
+                android:textColor="@color/dialer_button_text"
+                android:textSize="28sp"
+                android:autofillHints="" />
+
+            <ImageButton
+                android:id="@+id/backspace"
+                style="@android:style/Widget.Button.Inset"
+                android:layout_width="wrap_content"
+                android:layout_height="66dp"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_dial_delete"
+                android:src="@drawable/ic_delete_phone_number" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/ic_dial_number" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+
+        <View
+            android:layout_width="320dp"
+            android:layout_height="320dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg" />
+
+        <com.prabathweerapana.back_ani.RotaryDialerView
+            android:id="@+id/rotary_dialer"
+            android:layout_width="320dp"
+            android:layout_height="320dp"
+            android:layout_centerInParent="true" />
+
+        <View
+            android:layout_width="320dp"
+            android:layout_height="320dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/top" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>
